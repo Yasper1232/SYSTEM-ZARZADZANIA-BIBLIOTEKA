@@ -8,10 +8,30 @@
 
 void Ksiazka::wypiszinfo() {
 
-    cout << "nazwa ksiazki: "<<nazwa<<endl;
-    cout << "autor: "<<autor<<endl;
-    cout<<"termin: "<<termin<<endl;
-    cout<<"rok: "<<rok<<endl;
+   // cout << "nazwa ksiazki: "<<nazwa<<endl;
+   // cout << "autor: "<<autor<<endl;
+   // cout<<"termin: "<<termin<<endl;
+  //  cout<<"rok: "<<rok<<endl;
+
+    fstream ksiazki;
+
+    ksiazki.open("ksiazki.txt",ios::in);
+    if(ksiazki.good()== true)
+    {
+
+        while(!ksiazki.eof()){
+
+            getline(ksiazki,nazwa);
+            getline(ksiazki,autor);
+            getline(ksiazki,termin);
+            getline(ksiazki,rok);
+
+                cout<<"----------------"<<endl<<nazwa<<endl<<autor<<endl<<termin<<endl<<rok<<endl;
+        }
+ksiazki.close();
+    }
+
+
 
 }
 

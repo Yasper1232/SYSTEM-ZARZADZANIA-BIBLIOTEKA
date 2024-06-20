@@ -15,7 +15,7 @@ private:
     string nazwa;
     string autor;
     string termin;
-    int rok;
+    string rok;
 public:
 
     Ksiazka(string nazwa,string autor,string termin,int rok){
@@ -31,7 +31,7 @@ Ksiazka(){
         nazwa = "default";
         autor = "default";
         termin = "default";
-        rok = 0;
+        rok = '0';
 
 
     }

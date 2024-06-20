@@ -7,10 +7,13 @@ int main() {
 
     do {
 
-
+            cout<<endl<<endl<<endl<<"---------------------------------------"<<endl;
         cout << "-----SYSTEM ZARZADZANIA BIBLIOTEKA-----" << endl;
-        cout << "1.Dodaj tytul" << endl;
-        cout << "2.Dostepne tytuly" << endl;
+        cout<<"---------------------------------------"<<endl;
+
+        cout << "           1.Dodaj tytul" << endl;
+        cout << "           2.Dostepne tytuly" << endl;
+        cout << "           3.EXIT 0 " << endl;
 
         int wybor;
         cin >> wybor;
@@ -36,6 +39,12 @@ int main() {
                 k1->wypiszinfo();
 
                 delete k1;
+
+            }
+
+            case 3:{
+
+                exit(0);
 
             }
 
